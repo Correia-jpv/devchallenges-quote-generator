@@ -37,7 +37,7 @@ const App = () => {
 
   useEffect(() => {
     if (quotes.length === 0 && !author)
-      fetch('https://quote-garden.herokuapp.com/api/v3/quotes/random')
+      fetch('https://quote-garden.onrender.com/api/v3/quotes/random')
         .then((res) => res.json())
         .then((json) => {
           setQuotes(json.data)
@@ -48,7 +48,7 @@ const App = () => {
 
   useEffect(() => {
     if (author)
-      fetch('https://quote-garden.herokuapp.com/api/v3/quotes/?author=' + author)
+      fetch('https://quote-garden.onrender.com/api/v3/quotes/?author=' + author)
         .then((res) => res.json())
         .then((json) => {
           setQuotes(json.data)
